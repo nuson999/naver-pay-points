@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemDecorator from "@mui/joy/ListItemDecorator";
-import { ListItemButton } from "@mui/joy";
+import { ListItemButton, Typography } from "@mui/joy";
 import { Link } from "@mui/icons-material";
 
 const UrlList = () => {
@@ -36,14 +36,14 @@ const UrlList = () => {
   }, []); // The empty array means this effect runs once on mount
 
   return (
-    <List size="md">
+    <List size="md" sx={{ maxWidth: "700px" }}>
       {items.map((item, index) => (
         <ListItem key={index} sx={{ borderBottom: "1px solid lightgray" }}>
-          <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1, overflow: "hidden", maxWidth: "700px" }}>
+          <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1 }}>
             <ListItemDecorator>
               <Link />
             </ListItemDecorator>
-            {item}
+            <Typography noWrap>{item}</Typography>
           </ListItemButton>
         </ListItem> // Replace `item.name` with the actual property you want to display
       ))}
