@@ -8,7 +8,8 @@ import { ListItemButton } from "@mui/joy";
 import { Link } from "@mui/icons-material";
 
 const UrlList = () => {
-  const JSONURL = "/proxy/eungangku/get-click-points/master/point_links.json";
+  const JSONURL = "https://raw.githubusercontent.com/eungangku/get-click-points/master/point_links.json";
+  // const JSONURL = "/proxy/eungangku/get-click-points/master/point_links.json";
   // State for storing the list of items
   const [items, setItems] = useState([]);
 
