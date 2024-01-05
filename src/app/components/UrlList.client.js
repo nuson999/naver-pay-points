@@ -9,22 +9,13 @@ import { Link } from "@mui/icons-material";
 
 const UrlList = () => {
   const JSONURL = "https://eungangku.github.io/get-click-points/point_links.json";
-  // const JSONURL = "/proxy/eungangku/get-click-points/master/point_links.json";
+
   // State for storing the list of items
   const [items, setItems] = useState([]);
 
   // Function for fetching data from the URL
   const fetchData = async () => {
     try {
-      // const myHeaders = new Headers();
-      // myHeaders.append("Authorization", "Bearer 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");
-
-      // const requestOptions = {
-      //   method: "GET",
-      //   headers: myHeaders,
-      //   redirect: "follow",
-      // };
-
       const response = await fetch(JSONURL);
       // const response = await fetch(JSONURL, requestOptions);
       if (!response.ok) {
