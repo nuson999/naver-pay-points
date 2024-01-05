@@ -8,7 +8,7 @@ import { ListItemButton } from "@mui/joy";
 import { Link } from "@mui/icons-material";
 
 const UrlList = () => {
-  const JSONURL = "https://raw.githubusercontent.com/eungangku/get-click-points/master/point_links.json";
+  const JSONURL = "https://eungangku.github.io/get-click-points/point_links.json";
   // const JSONURL = "/proxy/eungangku/get-click-points/master/point_links.json";
   // State for storing the list of items
   const [items, setItems] = useState([]);
@@ -16,16 +16,17 @@ const UrlList = () => {
   // Function for fetching data from the URL
   const fetchData = async () => {
     try {
-      const myHeaders = new Headers();
-      myHeaders.append("Authorization", "Bearer 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");
+      // const myHeaders = new Headers();
+      // myHeaders.append("Authorization", "Bearer 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");
 
-      const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
+      // const requestOptions = {
+      //   method: "GET",
+      //   headers: myHeaders,
+      //   redirect: "follow",
+      // };
 
-      const response = await fetch(JSONURL, requestOptions);
+      const response = await fetch(JSONURL);
+      // const response = await fetch(JSONURL, requestOptions);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
