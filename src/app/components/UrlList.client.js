@@ -5,7 +5,7 @@ import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemDecorator from "@mui/joy/ListItemDecorator";
 import { ListItemButton, Typography } from "@mui/joy";
-import { Link } from "@mui/icons-material";
+import Chip from "@mui/joy/Chip";
 
 const UrlList = () => {
   const JSONURL = "https://eungangku.github.io/get-click-points/point_links.json";
@@ -37,16 +37,20 @@ const UrlList = () => {
 
   return (
     <List size="md" sx={{ maxWidth: "700px" }}>
-      {items.map((item, index) => (
-        <ListItem key={index} sx={{ borderBottom: "1px solid lightgray" }}>
-          <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1 }}>
-            <ListItemDecorator>
-              <Link />
-            </ListItemDecorator>
-            <Typography noWrap>{item}</Typography>
-          </ListItemButton>
-        </ListItem> // Replace `item.name` with the actual property you want to display
-      ))}
+      {items.map((item, index) => {
+        let eventId = item.match(/eventId=([^%&]*)/)[1];
+        let lastFourChars = eventId.slice(-4);
+        return (
+          <ListItem key={index} sx={{ borderBottom: "1px solid lightgray" }}>
+            <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1 }}>
+              <Chip color="primary" disabled={false} size="lg" variant="soft">
+                {lastFourChars}
+              </Chip>
+              <Typography noWrap>{item}</Typography>
+            </ListItemButton>
+          </ListItem> // Replace `item.name` with the actual property you want to display
+        );
+      })}
     </List>
   );
 };
