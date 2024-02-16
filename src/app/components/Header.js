@@ -10,12 +10,12 @@ function Header() {
         <Grid>
           <Box>
             <Typography level="h1">네이버 페이 포인트 링크</Typography>
-            <Typography level="h5">매일 00:45 업데이트</Typography>
+            <Typography level="h5">00:45 업데이트됨</Typography>
           </Box>
         </Grid>
         <Grid>
           <Box>
-            <Button variant="soft" startDecorator={<GitHub />}>
+            <Button variant="soft" href="https://github.com/eungangku" startDecorator={<GitHub />}>
               nuson999
             </Button>
           </Box>
