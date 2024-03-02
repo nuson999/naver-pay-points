@@ -22,7 +22,7 @@ function Header() {
               N
             </Typography>
             <Typography level="h1" sx={{ display: "inline-block" }}>
-              페이 적립 모음
+              Pay 적립 모음
             </Typography>
             <Typography level="h5" sx={{ marginTop: "10px" }}>
               오늘 00:45 업데이트됨
