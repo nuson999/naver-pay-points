@@ -9,13 +9,13 @@ function Header() {
       <Grid container spacing={3}>
         <Grid>
           <Box>
-            <Typography level="h1">네이버 페이 포인트 링크</Typography>
-            <Typography level="h5">00:45 업데이트됨</Typography>
+            <Typography level="h1">네이버 페이 적립 링크</Typography>
+            <Typography level="h5">오늘 00:45 업데이트됨</Typography>
           </Box>
         </Grid>
         <Grid>
           <Box>
-            <Button variant="soft" href="https://github.com/eungangku" startDecorator={<GitHub />}>
+            <Button component="a" href="https://github.com/nuson999" variant="soft" startDecorator={<GitHub />}>
               nuson999
             </Button>
           </Box>
