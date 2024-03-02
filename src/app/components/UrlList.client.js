@@ -8,7 +8,7 @@ import { ListItemButton, Typography } from "@mui/joy";
 import Chip from "@mui/joy/Chip";
 
 const UrlList = () => {
-  const JSONURL = "https://eungangku.github.io/get-click-points/point_links.json";
+  const JSONURL = "https://nuson999.github.io/get-click-points/point_links.json";
 
   // State for storing the list of items
   const [items, setItems] = useState([]);
