@@ -15,7 +15,7 @@ function Header() {
         </Grid>
         <Grid>
           <Box>
-            <Button component="a" href="https://github.com/nuson999" variant="soft" startDecorator={<GitHub />}>
+            <Button component="a" target="_blank" href="https://github.com/nuson999" variant="soft" startDecorator={<GitHub />}>
               nuson999
             </Button>
           </Box>
