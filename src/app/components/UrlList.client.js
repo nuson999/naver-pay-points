@@ -12,17 +12,20 @@ const UrlList = () => {
 
   // State for storing the list of items
   const [items, setItems] = useState([]);
+  const [newLinksLength, setNewLinksLength] = useState(0);
 
   // Function for fetching data from the URL
   const fetchData = async () => {
     try {
       const response = await fetch(JSONURL);
-      // const response = await fetch(JSONURL, requestOptions);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       const jsonData = JSON.parse(data);
+      setNewLinksLength(jsonData[0]);
+      // remove the first element from the array
+      jsonData.shift();
       jsonData.reverse();
       setItems(jsonData); // Or, if the data is nested, use data.rows or similar
     } catch (error) {
@@ -39,16 +42,17 @@ const UrlList = () => {
     <List size="md" sx={{ maxWidth: "700px" }}>
       {items.map((item, index) => {
         let eventId = item.match(/eventId=([^%&]*)/)[1];
-        let lastFourChars = eventId.slice(-4);
+        let chipContent = index < newLinksLength ? "New" : eventId.slice(-4);
+        let chipColor = index < newLinksLength ? "danger" : "primary"; // Set chip color based on index
         return (
           <ListItem key={index} sx={{ borderBottom: "1px solid lightgray" }}>
             <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1 }}>
-              <Chip color="primary" disabled={false} size="lg" variant="soft">
-                {lastFourChars}
+              <Chip color={chipColor} disabled={false} size="lg" variant="soft">
+                {chipContent}
               </Chip>
               <Typography noWrap>{item}</Typography>
             </ListItemButton>
-          </ListItem> // Replace `item.name` with the actual property you want to display
+          </ListItem>
         );
       })}
     </List>
