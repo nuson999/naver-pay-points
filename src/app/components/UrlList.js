@@ -49,13 +49,16 @@ const UrlList = () => {
           let eventId = item.match(/eventId=([^%&]*)/)[1];
           let chipContent = index < newLinksLength ? "New" : eventId.slice(-4);
           let chipColor = index < newLinksLength ? "danger" : "primary"; // Set chip color based on index
+          let textColor = item.includes("shoppinglive") ? "#7d1212" : "inherit"; // Check if item contains 'shoppinglive' and set text color accordingly
           return (
             <ListItem key={index} sx={{ borderBottom: "1px solid lightgray" }}>
               <ListItemButton component="a" target="_blank" href={item} variant="plain" sx={{ p: 1 }}>
                 <Chip color={chipColor} disabled={false} size="lg" variant="soft">
                   {chipContent}
                 </Chip>
-                <Typography noWrap>{item}</Typography>
+                <Typography noWrap sx={{ color: textColor }}>
+                  {item}
+                </Typography>
               </ListItemButton>
             </ListItem>
           );
