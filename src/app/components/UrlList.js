@@ -43,7 +43,7 @@ const UrlList = () => {
   return (
     <List size="md" sx={{ maxWidth: "700px" }}>
       {isLoading ? (
-        <p>...</p> // Replace this with your actual loading indicator
+        <p>Loading...</p> // Replace this with your actual loading indicator
       ) : (
         items.map((item, index) => {
           let eventId = item.match(/eventId=([^%&]*)/)[1];

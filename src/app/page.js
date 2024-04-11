@@ -1,7 +1,8 @@
 import styles from "./page.module.css";
 import Header from "./components/Header";
-import UrlList from "./components/UrlList.client";
+import UrlList from "./components/UrlList";
 import { Grid, Sheet } from "@mui/joy";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <UrlList />
         </Grid>
       </Grid>
+      <ScrollToTopBtn />
     </Sheet>
   );
 }
