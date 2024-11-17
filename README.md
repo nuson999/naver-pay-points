@@ -1,4 +1,4 @@
-# 💲naver-pay-points
+# naver-pay-points
 
 A daily updated collection of Naver Pay point accumulation links.
 
