@@ -13,12 +13,6 @@ This project is a website built with Next.js that automatically collects and org
 - Display of available point amounts
 - Mobile/Desktop responsive design
 
-## 🛠 Tech Stack
-
-- Frontend: Next.js
-- Backend: Link scraping server
-- Automation: Daily link collection and updates
-
 ## 🚀 Installation
 
 ```bash
