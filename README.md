@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💲Naver Pay Points Collection Links
 
-## Getting Started
+A daily updated collection of Naver Pay point accumulation links.
 
-First, run the development server:
+## 📝 Description
+
+This project is a website built with Next.js that automatically collects and organizes Naver Pay point accumulation links from across the internet. The links are automatically updated daily for your convenience.
+
+## ✨ Key Features
+
+- Daily automated link updates
+- One-click point accumulation
+- Display of available point amounts
+- Mobile/Desktop responsive design
+
+## 🛠 Tech Stack
+
+- Frontend: Next.js
+- Backend: Link scraping server
+- Automation: Daily link collection and updates
+
+## 🚀 Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/nuson999/naver-pay-points.git
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 How to Use
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Visit the website
+2. Click on desired point accumulation links
+3. Login to Naver (if required)
+4. Points are automatically accumulated
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🤝 Contributing
 
-## Learn More
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+## ⚠️ Disclaimers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- This service is not directly affiliated with Naver
+- Links are updated automatically daily but may occasionally be inactive
+- There may be daily limits on point accumulation
+- Use at your own risk
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔍 Features in Detail
 
-## Deploy on Vercel
+- Automatic daily link updates
+- Easy-to-use interface
+- Mobile-friendly design
+- Fast loading times
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌟 Upcoming Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 
+
+## 📞 Contact
+
+If you have any problems or suggestions, please create an issue in this repository.
+
+## 🔄 Updates
+
+The link database is automatically updated every 24 hours to ensure fresh, working links are always available.
+
+## 🔒 Security
+
+- No personal information is collected
+
+---
+⭐ If you found this project helpful, please give it a star!
